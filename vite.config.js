@@ -5,7 +5,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base:'/https://github.com/Bilalahmad366/rent-collection-system-/',
+  base:'/https://github.com/Bilalahmad366/rent-collection-system/',
   plugins: [
     vue(),
   ],
