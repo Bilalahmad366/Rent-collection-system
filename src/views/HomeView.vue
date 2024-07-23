@@ -3,7 +3,7 @@
   <hader />
   <main >
     <div class="flex justify-around items-center bg-neutral-700">
-      <div class="text-white">
+      <div class="text-white text">
         <p>welcome to our rent collection System .......</p>
       </div>
       <div class="homeImg pt-10">
@@ -20,12 +20,12 @@
       <div
         v-for="item in homeProperties"
         :key="item.id"
-        class="flex border bg-slate-50 rounded overflow-hidden m-10 gap-12 h-64 items-center pr-5"
+        class="box flex border bg-slate-50 rounded overflow-hidden gap-6  items-center  "
       >
-        <div class="img">
-          <img class="h-64 w-full" :src="item.propertyImg" alt="" />
+        <div class="productImg">
+          <img class= "" :src="item.propertyImg" alt="" />
         </div>
-        <div class="p-4">
+        <div class="p-4 productText">
           <div class="mb-2">
             <span class="font-bold">Owner Name:</span>
             <span>{{ item.OwnerName }}</span>
@@ -51,11 +51,7 @@
             <span>{{ item.MobileNo }}</span>
           </div>
         </div>
-        <button
-          class="btn float-end px- py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors duration-300 ease-in-out focus:outline-none"
-        >
-          Buy Now
-        </button>
+       
       </div>
     </div>
   </main>
@@ -90,4 +86,72 @@ export default {
   position: relative;
   bottom: -98px;
 }
+.box{
+  height: 40vh;
+  width: 95vw;
+  margin: 15px;
+}
+.productImg img{
+  height: 40vh;
+  width: 40vw;
+  }
+  .homeImg img{
+    height: 60vh;
+    
+  }
+  @media screen and (max-width: 1100px) {
+
+  .homeImg img{
+    height: 40vh;
+   
+  }
+ 
+}
+ @media screen and (max-width: 790px) {
+ 
+  .homeImg img{
+    height: 30vh;
+  }
+  .text{
+  font-size: 8px;
+}
+  .homeImg img{
+    height: 20vh;
+  }
+  .box{
+   
+    height: 25vh;
+  gap:2px;
+ 
+}
+
+ 
+  
+ 
+
+.productImg img{
+  height: 25vh;
+  width: 35vw;
+  }
+ }
+ @media screen and (max-width: 550px) {
+.text{
+  font-size: 8px;
+}
+  .homeImg img{
+    height: 20vh;
+  }
+  .box{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  height: 45vh;
+  gap:2px;
+ 
+}
+.productImg img{
+  height: 15vh;
+  
+  }
+ }
 </style>
